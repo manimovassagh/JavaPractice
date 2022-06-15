@@ -36,6 +36,11 @@ public class ProductController {
         repository.save(product);
     }
 
+    @RequestMapping(value = "/{id}",method = RequestMethod.DELETE)
+    public void deleteProduct(@PathVariable String id){
+    repository.deleteById(id);
+    }
+
 
 
 }
